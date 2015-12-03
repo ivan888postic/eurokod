@@ -20,7 +20,7 @@ class Vlasnici extends CI_Controller {
         
         $owner_view = $this->load->view("vlasnik", $data, true);
         $data["body"] = $owner_view;
-        $this->load->view("podloga", $data);
+        $this->load->view("okvir/podloga", $data);
     }
 
     public function updateVlasnik() {

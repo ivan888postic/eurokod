@@ -9,10 +9,10 @@
                 </h1>
                 <ol class="breadcrumb">
                     <li>
-                        <i class="fa fa-fw fa-life-ring"></i><a href="<?php base_url('putni_nalozi'); ?>">Eurokod</a>
+                        <i class="fa fa-fw fa-life-ring"></i><a href="<?php base_url(''); ?>putninalozi">Eurokod</a>
                     </li>
                     <li>
-                        <i class="fa fa-fw fa-files-o"></i>  <a href="<?php base_url('vlasnik'); ?>"><?php echo $title ?></a>
+                        <i class="fa fa-fw fa-files-o"></i>  <a href="<?php base_url(''); ?>vlasnici">Vlasnici</a>
                     </li>
                 </ol>
             </div>
@@ -20,7 +20,7 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <form role="form" action="index.php/vlasnici/updateVlasnik" method="post" class="form-horizontal">
+                <form role="form" action="vlasnici/updateVlasnik" method="post" class="form-horizontal">
                     <div class="col-lg-6">
 
                         <div class="row">

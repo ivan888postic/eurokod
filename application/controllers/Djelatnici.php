@@ -7,9 +7,13 @@ class Djelatnici extends CI_Controller {
     public function index() {
         $data['naslov'] = 'Podaci o djelatnicima';
         
-        $kupci = $this->load->view("kupci", $data, true);
-        $data["tijelo"] = $kupci;
-        $this->load->view("podloga", $data);
+        $this->load->model('Djelatnici_model');
+        $djelatnici  = $this->Djelatnici_model->getDjelatniksJoined();
+        $data['djelatnici'] = $djelatnici;
+        
+        $djelatnici_pogled = $this->load->view("djelatnici", $data, true);
+        $data['body'] = $djelatnici_pogled;
+        $this->load->view("okvir/podloga", $data);
     }
 
 }

@@ -34,19 +34,19 @@
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
                         <li>
-                            <a href="<?php base_url('putni_nalozi')?>"><i class="fa fa-fw fa-files-o"></i>Putni nalozi</a>
+                            <a href="putninalozi"><i class="fa fa-fw fa-files-o"></i>Putni nalozi</a>
                         </li>
                         <li>
-                            <a href="index.php/vlasnici"><i class="fa fa-fw fa-user"></i>Podaci o vlasniku</a>
+                            <a href="vlasnici"><i class="fa fa-fw fa-user"></i>Podaci o vlasniku</a>
                         </li>
                         <li>
-                            <a href="Djelatnici"><i class="fa fa-fw fa-users"></i>Podaci o djelatnicima</a>
+                            <a href="djelatnici"><i class="fa fa-fw fa-users"></i>Podaci o djelatnicima</a>
                         </li>
                         <li>
-                            <a href="Automobili"><i class="fa fa-fw fa-road"></i>Podaci o automobilima</a>
+                            <a href="automobili"><i class="fa fa-fw fa-road"></i>Podaci o automobilima</a>
                         </li>
                         <li>
-                            <a href="Opcine"><i class="fa fa-fw fa-homes"></i>Podaci o općinama</a>
+                            <a href="opcine"><i class="fa fa-fw fa-homes"></i>Podaci o općinama</a>
                         </li>
                     </ul>
                 </div>

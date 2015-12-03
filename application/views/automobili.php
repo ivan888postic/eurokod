@@ -12,7 +12,7 @@
                         <i class="fa fa-fw fa-life-ring"></i><a href="<?php base_url(''); ?>putninalozi">Eurokod</a>
                     </li>
                     <li>
-                        <i class="fa fa-fw fa-files-o"></i>  <a href="<?php base_url(''); ?>putni_nalozi"><?php echo $naslov ?></a>
+                        <i class="fa fa-fw fa-files-o"></i>  <a href="<?php base_url(''); ?>automobili">Automobili</a>
                     </li>
                 </ol>
             </div>
@@ -21,7 +21,7 @@
         <!--                TABLE-->
         <div class="row">
             <div class="col-lg-12">
-                <h2>Tablica sa putnim nalozima</h2>
+                <h2>Podaci o AUTOMOBILIMA</h2>
             </div>
         </div>
     </div>
