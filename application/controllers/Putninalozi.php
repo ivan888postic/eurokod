@@ -9,5 +9,5 @@ class Putninalozi extends CI_Controller {
         $nalozi = $this->load->view("putni_nalozi", $data, true);
         $data["body"] = $nalozi;
         $this->load->view("okvir/podloga", $data);
-    }
+    }   
 }

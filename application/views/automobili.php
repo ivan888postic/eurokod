@@ -18,14 +18,93 @@
             </div>
         </div>
 
-        <!--                TABLE-->
-        <div class="row">
-            <div class="col-lg-12">
-                <h2>Podaci o AUTOMOBILIMA</h2>
+        <div class="row animated fadeInDown">
+            <div class="col-lg-6">
+                <div class="ibox-content">
+                    <div class="panel blank-panel">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a aria-expanded="true" data-toggle="tab" href="#all">Pregled automobila</a></li>
+                            <li class=""><a aria-expanded="false" data-toggle="tab" href="#add">Novi automobil</a></li>
+                        </ul>
+                    </div>
+                    <div class="panel-body">
+                        <div class="tab-content">
+                            <div id="all" class="tab-pane active">
+                                <div id="all-container">
+                                    <div class="wrapper wrapper-content">
+                                        <div class="ibox float-e-margins">
+                                            <div class="ibox-content">
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered table-hover table-striped">
+                                                        <thead>
+                                                            <tr>
+                                                                <th style="text-align: center;">Naziv</th>
+                                                                <th style="text-align: center;">Registarska oznaka</th>
+                                                                <th style="text-align: center;">Kilometri</th>
+                                                                <th style="text-align: center;">Opcije</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <?php
+                                                            if (isset($automobili)) {
+                                                                foreach ($automobili as $auto) {
+                                                                    ?>
+                                                                    <tr style="text-align: center;">
+                                                                        <td><?= $auto->naziv ?></td>
+                                                                        <td><?= $auto->reg_oznaka ?></td>
+                                                                        <td><?= $auto->km ?></td>
+                                                                        <td>
+                                                                            <button type="submit" class="btn btn-success" action="automobili/edit/<?= $auto->id ?>">Editiraj</button>
+                                                                            <button type="submit" class="btn btn-danger" action="automobili/obrisi">Obriši</button>
+                                                                        </td>
+                                                                    </tr>   
+                                                                    <?php
+                                                                }
+                                                            }
+                                                            ?>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="add" class="tab-pane">
+                                <div id="add-container">
+                                    <div class="row animated fadeInDown">
+                                        <div class="col-lg-12"> 
+                                            <div class="wrapper wrapper-content">
+                                                <div class="ibox float-e-margins">
+                                                    <div class="ibox-content">
+                                                        <form action="automobili/dodajAuto" method="post" class="form-horizontal">
+                                                            <div class="form-group">
+                                                                <label for="naziv">Naziv</label>
+                                                                <input class="form-control" type="text" name="naziv" placeholder="Naziv" required>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="reg_oznaka">Registarska oznaka</label>
+                                                                <input class="form-control" type="text" name="reg_oznaka" placeholder="Registarska oznaka" required>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="km">Kilometri</label>
+                                                                <input class="form-control" type="text" name="km" placeholder="Kilometri" required>
+                                                            </div>
+                                                            <div class="row">
+                                                                <button class="btn btn-success form-control" type="submit" class="btn btn-default">Spremi automobil</button>
+                                                            </div>
+                                                        </form> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
             </div>
         </div>
     </div>
-    <!-- /.container-fluid -->
-
-</div>
-<!-- /#page-wrapper -->
+</div>            

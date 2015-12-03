@@ -9,10 +9,10 @@
                 </h1>
                 <ol class="breadcrumb">
                     <li>
-                        <i class="fa fa-fw fa-life-ring"></i><a href="<?php base_url(''); ?>putninalozi">Eurokod</a>
+                        <i class="fa fa-fw fa-life-ring"></i><a href="<?php base_url(); ?>putninalozi">Eurokod</a>
                     </li>
                     <li>
-                        <i class="fa fa-fw fa-files-o"></i>  <a href="<?php base_url(''); ?>putni_nalozi"><?php echo $naslov ?></a>
+                        <i class="fa fa-fw fa-files-o"></i>  <a href="<?php base_url(); ?>putninalozi"><?php echo $naslov ?></a>
                     </li>
                 </ol>
             </div>

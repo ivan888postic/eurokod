@@ -536,6 +536,8 @@ if ( ! function_exists('redirect'))
 			$uri = site_url($uri);
 		}
 
+                log_message('error', 'URI: ' . $uri);
+                
 		// IIS environment likely? Use 'refresh' for better compatibility
 		if ($method === 'auto' && isset($_SERVER['SERVER_SOFTWARE']) && strpos($_SERVER['SERVER_SOFTWARE'], 'Microsoft-IIS') !== FALSE)
 		{

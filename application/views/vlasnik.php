@@ -33,7 +33,17 @@
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="direktor">Direktor</label>
-                                    <input class="form-control" type="text" name="direktor" placeholder="Direktor" value="<?php echo $boss->naziv; ?>" required>
+                                    <select name="direktor" required class="form-control">
+                                        <?php
+                                        foreach ($djelatnici as $dj) {
+                                            if ($owner->direktor_id == $dj->id) {
+                                                ?>
+                                                <option selected value="<?php echo $dj->id; ?>"><?php echo $dj->naziv; ?></option>
+                                            <?php } else { ?>
+                                                <option value = "<?php echo $dj->id; ?>"><?php echo $dj->naziv; ?></option>
+                                            <?php }
+                                        } ?>   
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -128,7 +138,7 @@
                         </div>
 
                         <div class="row">
-                            <button class="form-control" type="submit" class="btn btn-default">Spremi promjene</button>
+                            <button type="submit" class="btn btn-success form-control">Spremi promjene</button>
                         </div>
 
                     </div>

@@ -18,6 +18,9 @@ class Vlasnici extends CI_Controller {
         $boss->load($owner->direktor_id);
         $data['boss'] = $boss;
         
+        $djelatnici  = $this->Djelatnici_model->getDjelatniks();
+        $data['djelatnici'] = $djelatnici;
+        
         $owner_view = $this->load->view("vlasnik", $data, true);
         $data["body"] = $owner_view;
         $this->load->view("okvir/podloga", $data);
@@ -32,7 +35,7 @@ class Vlasnici extends CI_Controller {
             $owner->load($vlasnik_id);
             $owner->naziv = $this->input->post('naziv');
             $owner->opis = $this->input->post('opis');
-            //$this->direktor_id = $this->input->post('naziv');
+            $owner->direktor_id = $this->input->post('direktor');
             $owner->adresa = $this->input->post('adresa');
             $owner->mjesto = $this->input->post('mjesto');
             $owner->postanski_broj = $this->input->post('postanski_broj');
