@@ -41,7 +41,8 @@
                                                                 <th style="text-align: center;">Id</th>
                                                                 <th style="text-align: center;">Naziv</th>
                                                                 <th style="text-align: center;">Šifra</th>
-                                                                <th style="text-align: center;">Opcije</th>
+                                                                <th style="text-align: center;">Editiraj</th>
+                                                                <th style="text-align: center;">Obriši</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -55,7 +56,12 @@
                                                                         <td><?= $opcina->sifra ?></td>
                                                                         <td>
                                                                             <button type="submit" class="btn btn-success" action="automobili/edit/<?= $opcina->id ?>">Editiraj</button>
-                                                                            <button type="submit" class="btn btn-danger" action="automobili/obrisi">Obriši</button>
+                                                                        </td>
+                                                                        <td>
+                                                                            <form method="POST" action="opcine/obrisiOpcinu">
+                                                                                <input type="hidden" name="id" value="<?= $opcina->id ?>">
+                                                                                <button type="submit" class="btn btn-danger">Obriši</button>
+                                                                            </form>
                                                                         </td>
                                                                     </tr>   
                                                                     <?php

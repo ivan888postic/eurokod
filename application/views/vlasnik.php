@@ -116,14 +116,14 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label for="benzin_kn">Benzin [kn]</label>
-                                    <input class="form-control" type="text" name="benzin_kn" placeholder="Benzin [kn]" value="<?php echo $owner->benzin_kn; ?>" required> 
+                                    <label for="benzin_kn">Benzin [kn/km]</label>
+                                    <input class="form-control" type="text" name="benzin_kn" placeholder="Benzin [kn/km]" value="<?php echo $owner->benzin_kn; ?>" required> 
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label for="benzin_eur">Benzin [eur]</label>
-                                    <input class="form-control" type="text" name="benzin_eur" placeholder="Benzin [eur]" value="<?php echo $owner->benzin_eur; ?>" required> 
+                                    <label for="benzin_eur">Benzin [eur/km]</label>
+                                    <input class="form-control" type="text" name="benzin_eur" placeholder="Benzin [eur/km]" value="<?php echo $owner->benzin_eur; ?>" required> 
                                 </div>
                             </div>
                         </div>

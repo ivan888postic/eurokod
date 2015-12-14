@@ -56,3 +56,8 @@ CREATE TABLE `eurokod`.`opcine` (
     `sifra` VARCHAR(5) NOT NULL , 
     PRIMARY KEY (`id`)
 )
+
+
+CREATE TABLE `eurokod`.`troskovi` ( 
+    `id` INT NOT NULL AUTO_INCREMENT , 
+    `nalog_id` INT NOT NULL AUTO_INCREMENT , `opis` VARCHAR(30) NOT NULL , `iznos` DECIMAL(11,2) NOT NULL , PRIMARY KEY (`id`, `nalog_id`))

@@ -30,7 +30,16 @@ class Automobili extends CI_Controller {
             $auto->save();
         }
         
-        log_message('error', 'Djelatnico/dodajAuto method redirecting to djelatnici... ');
+        redirect('automobili');
+    }
+    
+    public function obrisiAuto() {
+        if (isset($_POST)) {
+            $id = $this->input->post('id');
+            $auto = new Automobili_model();
+            $auto->load($id);
+            $auto->delete();
+        }
         redirect('automobili');
     }
     
